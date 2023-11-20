@@ -1,0 +1,30 @@
+--> img=imread('rose.jpg');
+
+--> img=rgb2gray(img);
+
+--> noise=imnoise(img,'salt & pepper');
+
+--> filter=1/25*ones(5,5);
+
+--> f1=imfilter(noise,filter);
+
+--> imshow(f1);
+
+--> hsize=[5,5]
+ hsize  = 
+
+   5.   5.
+
+--> sigma=1;
+
+--> f2=fspecial('gaussian',hsize,sigma);
+
+--> l=imfilter(noise,f2);
+
+--> scf();
+
+--> imshow(l);
+
+--> scf();
+
+--> imshow(noise);
