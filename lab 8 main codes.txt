@@ -1,0 +1,29 @@
+#impluse signal
+t = -4:1:4;
+a =[ zeros (1 ,4) 1 zeros (1 ,4) ];
+k = input (” E n t e r t h e Ampli tude : ”) ; 
+b = k * a;
+subplot (2 ,2 ,1) ;
+plot (t ,b ) ;
+xlabel (”Time”) ;
+ylabel (” Amplitude ”) ;
+title (” Im p ul s e R e s po n s e ”) ;
+
+# Discrete 
+t =0:3;
+y = ones (1 ,4) ;
+subplot (2 ,2 ,3) ;
+plot2d3 (t , y ) ;
+xlabel ( ’ Time ’ ) ;
+ylabel ( ’ Ampli tude ’ ) ;
+title ( ’ Uni t S t e p D i s c r e t e S i g n a l ’ ) ;
+
+#Continous squared Wave Function
+a = input ( ’ E n t e r Ampli tude : ’ ) ;
+t =0:0.001:1;
+d = a * squarewave (2* %pi *10* t ) ;
+subplot (2 ,2 ,1) ;
+plot (t ,d ) ;
+xlabel (”−−−−−−−−−−>Time I n d e x t ( s e c . ) ”) ;
+ylabel (”−−−−−−−−−−>Ampli tude ”) ;
+title (” S q ua r e Wave S i g n a l ”) ;
